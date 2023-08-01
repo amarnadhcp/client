@@ -42,6 +42,8 @@ const Login = () => {
                                     email: res.data.user.email,
                                     image:res.data.user.img,
                                     isSeller:res.data.user.isSeller,
+                                    country:res.data.user.country,
+                                   desc:res.data.user.desc
 
                                 }))
                                 localStorage.setItem("currentUser", res.data.token)
@@ -71,7 +73,9 @@ const Login = () => {
                         id: res.data.info._id,
                         username: res.data.info.username,
                         email: res.data.info.email,
-                        isSeller:res.data.info.isSeller
+                        isSeller:res.data.info.isSeller,
+                        country:res.data.info.country,
+                        desc:res.data.info.desc
                     }))
                     localStorage.setItem("currentUser", res.data.token)
                     navigate("/")

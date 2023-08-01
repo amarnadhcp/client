@@ -5,10 +5,11 @@ import Profile from "../pages/user/ProFile"
 import Login from "../pages/user/Login";
 import Register from "../pages/user/Register";
 import EmailVerify from "../components/Emailverify/EmailVerify";
+import Dashboard from "../pages/user/Dashboard";
 
 import UserPublic from "../protected/UserPublic";
 import UserProtect from "../protected/UserProtected";
-import PageNotFound from "../pages/pagenotFound/PageNotFound";
+import PageNotFound from "../pages/user/PageNotFound";
 
 
 
@@ -23,11 +24,10 @@ const UserRoutes = () => {
       <Route exact path="/register" element={<UserPublic><Register /></UserPublic>} />
       <Route exact path="/:id/verify/:token" element={<EmailVerify />} />
       <Route exact path="/profile" element={<UserProtect>  <Profile />  </UserProtect>} />
-
+      <Route exact path="/dashboard" element={  <UserProtect>    <Dashboard/>  </UserProtect>  } />
     </Routes>
   );
 };
-
 
 
 

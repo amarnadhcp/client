@@ -5,7 +5,7 @@ function AdminProtected(props){
     if(localStorage.getItem("currentAdmin")){
         return props.children
     }else{
-        return <Navigate to="/"/>
+        return <Navigate to="/admin/login"/>
     }
 }
 
